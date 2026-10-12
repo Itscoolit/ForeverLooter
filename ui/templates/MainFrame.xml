@@ -1,0 +1,5 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <Frame name="FL_MainFrame" inherits="DefaultPanelTemplate" virtual="true">
+        <Size x="200" y="180" />
+    </Frame>
+</Ui>

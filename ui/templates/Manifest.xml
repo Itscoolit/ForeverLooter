@@ -1,0 +1,6 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <Include file="MainFrame.xml" />
+    <Include file="ConfigFrame.xml" />
+    <Include file="Scroll.xml" />
+    <Include file="ItemScroll.xml" />
+</Ui>

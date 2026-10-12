@@ -1,0 +1,89 @@
+---@class ForeverLooter
+local ForeverLooter = select(2, ...)
+
+---@class FL_Locales
+local Locales = ForeverLooter.Locales
+
+Locales.zhCN = function()
+    local L = {}
+    L["START"] = "开始"
+    L["CONTINUE"] = "继续"
+    L["PAUSE"] = "暂停"
+    L["RESET"] = "重置"
+    L["CONFIG_TITLE"] = "ForeverLooter Configuration"
+    L["CONFIG_UI_SCALE"] = "UI Scale"
+    L["CONFIG_FORCE_VENDOR_PRICE"] = "Force vendor price"
+    L["CONFIG_USE_DISENCHANT_VALUE"] = "Use disenchant value"
+    L["CONFIG_PRICE_SOURCE"] = "Price source"
+    L["CONFIG_FORCE_USE_DISENCHANT_VALUE"] = "Force disenchant"
+    L["CONFIG_TSM_STRING"] = "TSM custom string"
+    L["CONFIG_TSM_DISENCHANT_STRING"] = "TSM disenchant string"
+    L["CONFIG_MIN_PRICES"] = "Minimum prices"
+    L["CONFIG_VALIDATE"] = "Validate"
+    L["CONFIG_RESET"] = "Reset"
+    L["CONFIG_SAVE"] = "Save"
+    L["CONFIG_TSM_VALID"] = "Valid TSM string"
+    L["CONFIG_TSM_INVALID"] = "Invalid TSM string"
+    L["CONFIG_TSM_EMPTY"] = "TSM string is empty"
+    L["CONFIG_TSM_NOT_AVAILABLE"] = "TSM is not available"
+    L["CONFIG_SAVE_ERROR_TSM"] = "Cannot save: TSM string is invalid"
+    L["CONFIG_SAVED"] = "Configuration saved"
+    L["TIME_LABEL"] = "时间:"
+    L["GOLD_LABEL"] = "金币:"
+    L["ITEMS_LABEL"] = "物品:"
+    L["GPH_LABEL"] = "每小时金币:"
+    L["PRICIEST_LABEL"] = "最贵:"
+    L["USAGE"] = [[====== |cFFd8de35ForeverLooter 使用信息|r ======
+  |cFF36e8e6/flo|r: 切换显示/隐藏
+  |cFF36e8e6/flo|r |cFFf1f488help|r: 显示帮助
+  |cFF36e8e6/flo|r |cFFf1f488show|r: 显示 ForeverLooter
+  |cFF36e8e6/flo|r |cFFf1f488hide|r: 隐藏 ForeverLooter
+  |cFF36e8e6/flo|r |cFFf1f488info|r: 查看插件信息。
+  |cFF36e8e6/flo|r |cFFf1f488custom '自定义 TSM 字符串'|r: 设置用于价格计算的自定义 TSM 字符串。若为空，则返回当前使用的字符串。
+    示例：/flo custom dbmarket
+              /flo custom
+  |cFF36e8e6/flo|r |cFFf1f488mprice '值'|r: 为某个品质设置最低价格阈值。
+            mpricex: 所有可用品质。
+            mprice1: 品质 1 - 普通 - 白色
+            mprice2: 品质 2 - 稀少 - 绿色
+            mprice3: 品质 3 - 稀有 - 蓝色
+            mprice4: 品质 4 - 史诗 - 紫色
+      剩余品质将使用商人价格（若存在）。
+    示例：/flo mprice1 50 s
+              /flo mprice2 5000
+              /flo mprice3 500 g
+              /flo mprice4 5 c
+      mprice 的价格格式为数字后跟 g(金)、s(银) 或 c 铜)。若仅指定数字，则默认使用金。
+      |cFF36e8e6/flo|r |cFFf1f488disenchant|r: Enable/disable the use of the disenchantment value for looted items (if it's higher than the direct auction value).
+  |cFF36e8e6插件版本:|r ]]
+    L["WELCOME"] = "欢迎来到 |cFFd8de35ForeverLooter|r!请使用 |cFF36e8e6/flo|r |cFFf1f488help|r 查看插件选项。"
+    L["CLOSE"] = "|cFF36e8e6/flo|r |cFFf1f488show|r: 再次显示 |cFFd8de35ForeverLooter|r"
+    L["INFO"] = "|cFFd8de35ForeverLooter|r 是一款轻量且快速的战利品追踪插件，由 Will0w7 创建。"
+    L["TSM_NOT_AVAILABLE"] = "|cFFd8de35ForeverLooter:|r TSM 不可用。"
+    L["TSM_CUSTOM_STRING_NOT_VALID"] = "|cFFd8de35ForeverLooter:|r 以下 TSM 字符串无效且未设置： "
+    L["TSM_CUSTOM_STRING_VALID"] = "|cFFd8de35ForeverLooter:|r 以下 TSM 字符串有效并已设置： "
+    L["TSM_CUSTOM_STRING"] = "|cFFd8de35ForeverLooter:|r 使用以下 TSM 字符串： "
+    L["NEW_DB_VERSION"] = "|cFFd8de35ForeverLooter:|r 检测到数据库新版本，正在更新…"
+    L["DB_UPDATED"] = "|cFFd8de35ForeverLooter:|r 数据库已成功更新!"
+    L["MPRICE_ERROR"] = "|cFFd8de35ForeverLooter:|r 以下最低价格无效： "
+    L["MPRICE_VALID"] = "|cFFd8de35ForeverLooter:|r 以下最低价格有效并已设置："
+    L["MPRICE_QUALITY_1"] = "普通"
+    L["MPRICE_QUALITY_2"] = "稀少"
+    L["MPRICE_QUALITY_3"] = "稀有"
+    L["MPRICE_QUALITY_4"] = "史诗"
+    L["MPRICE_QUALITY_99"] = "所有品质"
+    L["MPRICE_UNRECOGNIZED_COIN"] = "|cFFd8de35ForeverLooter:|r 未识别的货币，请检查输入。"
+    L["MPRICE_COIN_G"] = "金币"
+    L["MPRICE_COIN_S"] = "银币"
+    L["MPRICE_COIN_C"] = "铜币"
+    L["FORCE_VENDOR_PRICE_ENABLED"] = "|cFFd8de35ForeverLooter:|r 强制使用商人价格已开启。仅使用商人出售价格。"
+    L["FORCE_VENDOR_PRICE_DISABLED"] = "|cFFd8de35ForeverLooter:|r 强制使用商人价格已关闭。"
+    L["TIME_ERROR"] =
+    "|cFFd8de35ForeverLooter:|r 时间格式错误，必须为: 00h00m00s 或任意时间组合(5m30s)"
+    L["ALL"] = "全部"
+    L["USE_DISENCHANT_VALUE_ENABLED"] =
+    "|cFFd8de35ForeverLooter:|r Using disenchantment value when it is higher than the direct auction price."
+    L["USE_DISENCHANT_VALUE_DISABLED"] =
+    "|cFFd8de35ForeverLooter:|r Disenchantment value is no longer used. The direct auction price will always be used."
+    return L
+end

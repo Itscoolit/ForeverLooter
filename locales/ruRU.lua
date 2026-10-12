@@ -1,0 +1,94 @@
+---@class ForeverLooter
+local ForeverLooter = select(2, ...)
+
+---@class FL_Locales
+local Locales = ForeverLooter.Locales
+
+Locales.ruRU = function()
+    local L = {}
+    L["START"] = "Старт"
+    L["CONTINUE"] = "Продолжить"
+    L["PAUSE"] = "Пауза"
+    L["RESET"] = "Сбросить"
+    L["CONFIG_TITLE"] = "ForeverLooter Configuration"
+    L["CONFIG_UI_SCALE"] = "UI Scale"
+    L["CONFIG_FORCE_VENDOR_PRICE"] = "Force vendor price"
+    L["CONFIG_USE_DISENCHANT_VALUE"] = "Use disenchant value"
+    L["CONFIG_PRICE_SOURCE"] = "Price source"
+    L["CONFIG_FORCE_USE_DISENCHANT_VALUE"] = "Force disenchant"
+    L["CONFIG_TSM_STRING"] = "TSM custom string"
+    L["CONFIG_TSM_DISENCHANT_STRING"] = "TSM disenchant string"
+    L["CONFIG_MIN_PRICES"] = "Minimum prices"
+    L["CONFIG_VALIDATE"] = "Validate"
+    L["CONFIG_RESET"] = "Reset"
+    L["CONFIG_SAVE"] = "Save"
+    L["CONFIG_TSM_VALID"] = "Valid TSM string"
+    L["CONFIG_TSM_INVALID"] = "Invalid TSM string"
+    L["CONFIG_TSM_EMPTY"] = "TSM string is empty"
+    L["CONFIG_TSM_NOT_AVAILABLE"] = "TSM is not available"
+    L["CONFIG_SAVE_ERROR_TSM"] = "Cannot save: TSM string is invalid"
+    L["CONFIG_SAVED"] = "Configuration saved"
+    L["TIME_LABEL"] = "Время:"
+    L["GOLD_LABEL"] = "Золото:"
+    L["ITEMS_LABEL"] = "Предметы:"
+    L["GPH_LABEL"] = "GPH:"
+    L["PRICIEST_LABEL"] = "Самое дорогое:"
+    L["USAGE"] = [[====== |cFFd8de35Информация об использовании ForeverLooter|r ======
+  |cFF36e8e6/flo|r: Toggle Show/Hide
+  |cFF36e8e6/flo|r |cFFf1f488help|r: Показать помощь
+  |cFF36e8e6/flo|r |cFFf1f488show|r: Показать ForeverLooter
+  |cFF36e8e6/flo|r |cFFf1f488hide|r: Скрыть ForeverLooter
+  |cFF36e8e6/flo|r |cFFf1f488info|r: Показывает информацию об аддоне.
+  |cFF36e8e6/flo|r |cFFf1f488custom 'пользовательская строка TSM'|r: Устанавливает пользовательскую строку TSM для использования в расчете цены. Если пусто, возвращает пользовательскую строку TSM, которая в данный момент используется.
+    Примеры: /flo custom dbmarket
+              /flo custom
+  |cFF36e8e6/flo|r |cFFf1f488mprice 'значение'|r: Устанавливает минимальный порог цены для данного качества.
+            mpricex: Все доступные качества.
+            mprice1: Качество 1 - Обычное - Белый
+            mprice2: Качество 2 - Необычное - Зеленый
+            mprice3: Качество 3 - Редкое - Синий
+            mprice4: Качество 4 - Эпическое - Фиолетовый
+      Остальные качества будут использовать цену поставщика, если она у них есть.
+    Примеры: /flo mprice1 50 s
+              /flo mprice2 5000
+              /flo mprice3 500 g
+              /flo mprice4 5 c
+      Формат цены для mprice — это число, за которым следует g(золото), s(серебро) или c(медная). Если указать только число, по умолчанию будет использоваться золото.
+      |cFF36e8e6/flo|r |cFFf1f488disenchant|r: Enable/disable the use of the disenchantment value for looted items (if it's higher than the direct auction value).
+  |cFF36e8e6Версия аддона:|r ]]
+    L["WELCOME"] =
+    "Добро пожаловать в |cFFd8de35ForeverLooter|r! Используйте |cFF36e8e6/flo|r |cFFf1f488help|r для настроек аддона."
+    L["CLOSE"] = "|cFF36e8e6/flo|r |cFFf1f488show|r: Показать снова |cFFd8de35ForeverLooter|r"
+    L["INFO"] = "|cFFd8de35ForeverLooter|r - лёгкий и быстрый аддон для отслеживания добычи, созданный Will0w7."
+    L["TSM_NOT_AVAILABLE"] = "|cFFd8de35ForeverLooter:|r TSM недоступен."
+    L["TSM_CUSTOM_STRING_NOT_VALID"] =
+    "|cFFd8de35ForeverLooter:|r Следующая пользовательская строка TSM недействительна и не была установлена: "
+    L["TSM_CUSTOM_STRING_VALID"] =
+    "|cFFd8de35ForeverLooter:|r Следующая пользовательская строка TSM действительна и была установлена: "
+    L["TSM_CUSTOM_STRING"] = "|cFFd8de35ForeverLooter:|r Использование следующей пользовательской строки TSM: "
+    L["NEW_DB_VERSION"] = "|cFFd8de35ForeverLooter:|r Обнаружена новая версия базы данных, обновление..."
+    L["DB_UPDATED"] = "|cFFd8de35ForeverLooter:|r База данных успешно обновлена!"
+    L["MPRICE_ERROR"] = "|cFFd8de35ForeverLooter:|r Следующая минимальная цена недействительна: "
+    L["MPRICE_VALID"] = "|cFFd8de35ForeverLooter:|r Следующая минимальная цена действительна и была установлена: "
+    L["MPRICE_QUALITY_1"] = "Обычное"
+    L["MPRICE_QUALITY_2"] = "Необычное"
+    L["MPRICE_QUALITY_3"] = "Редкое"
+    L["MPRICE_QUALITY_4"] = "Эпическое"
+    L["MPRICE_QUALITY_99"] = "Все качества"
+    L["MPRICE_UNRECOGNIZED_COIN"] = "|cFFd8de35ForeverLooter:|r Нераспознанная монета, проверьте ввод."
+    L["MPRICE_COIN_G"] = "Золото"
+    L["MPRICE_COIN_S"] = "Серебро"
+    L["MPRICE_COIN_C"] = "Медная"
+    L["FORCE_VENDOR_PRICE_ENABLED"] =
+    "|cFFd8de35ForeverLooter:|r Принудительное включение цены продавца. Использование только цены продажи продавца."
+    L["FORCE_VENDOR_PRICE_DISABLED"] = "|cFFd8de35ForeverLooter:|r Принудительное отключение цены продавца."
+    L["TIME_ERROR"] =
+    "|cFFd8de35ForeverLooter:|r Формат неверен, он должен быть: 00h00m00s или любая комбинация времени (5m30s)."
+    L["REMOVE_CONFIRM"] = "Удалить %s из общей суммы сессии?"
+    L["ALL"] = "ВСЕ"
+    L["USE_DISENCHANT_VALUE_ENABLED"] =
+    "|cFFd8de35ForeverLooter:|r Using disenchantment value when it is higher than the direct auction price."
+    L["USE_DISENCHANT_VALUE_DISABLED"] =
+    "|cFFd8de35ForeverLooter:|r Disenchantment value is no longer used. The direct auction price will always be used."
+    return L
+end

@@ -1,0 +1,26 @@
+## Interface: 16001
+## Version: 2.0.0
+## Title: ForeverLooter
+## Author: ForeverTracker
+## Notes: Money and loot tracker with a Blizzard-style interface for WoW Forever.
+## Notes-esES: Un addon ligero y rápido para ver cuanto oro ganas en tus farmeos
+## Notes-ruRU: Лёгкий и быстрый аддон, позволяющий узнать, сколько золота Вы зарабатываете
+## IconTexture: Interface\Icons\inv_misc_coin_02
+
+## X-Category: Auction/Economy
+## X-Localizations: enUS, esES, ruRU
+
+## SavedVariables: ForeverLooterXDB
+## SavedVariablesPerCharacter: ForeverLooterDB
+## OptionalDeps: TradeSkillMaster, Auctionator, Auctioneer, OribosExchange, RECrystallize
+
+debug\Manifest.xml
+
+Init.lua
+locales\Manifest.xml
+
+utils\Manifest.xml
+data\Manifest.xml
+
+ui\Manifest.xml
+core\Manifest.xml

@@ -1,0 +1,93 @@
+---@class ForeverLooter
+local ForeverLooter = select(2, ...)
+
+---@class FL_Locales
+local Locales = ForeverLooter.Locales
+
+Locales.esMX = function()
+    local L = {}
+    L["START"] = "Comenzar"
+    L["CONTINUE"] = "Continuar"
+    L["PAUSE"] = "Pausar"
+    L["RESET"] = "Reiniciar"
+    L["CONFIG_TITLE"] = "Configuración de ForeverLooter"
+    L["CONFIG_UI_SCALE"] = "Escala de UI"
+    L["CONFIG_FORCE_VENDOR_PRICE"] = "Forzar precio de vendedor"
+    L["CONFIG_USE_DISENCHANT_VALUE"] = "Usar valor de desencantar"
+    L["CONFIG_PRICE_SOURCE"] = "Fuente de precio"
+    L["CONFIG_FORCE_USE_DISENCHANT_VALUE"] = "Forzar desencantar"
+    L["CONFIG_TSM_STRING"] = "Cadena TSM personalizada"
+    L["CONFIG_TSM_DISENCHANT_STRING"] = "Cadena TSM de desencantar"
+    L["CONFIG_MIN_PRICES"] = "Precios mínimos"
+    L["CONFIG_VALIDATE"] = "Validar"
+    L["CONFIG_RESET"] = "Restablecer"
+    L["CONFIG_SAVE"] = "Guardar"
+    L["CONFIG_TSM_VALID"] = "Cadena TSM válida"
+    L["CONFIG_TSM_INVALID"] = "Cadena TSM no válida"
+    L["CONFIG_TSM_EMPTY"] = "La cadena TSM está vacía"
+    L["CONFIG_TSM_NOT_AVAILABLE"] = "TSM no está disponible"
+    L["CONFIG_SAVE_ERROR_TSM"] = "No se puede guardar: la cadena TSM no es válida"
+    L["CONFIG_SAVED"] = "Configuración guardada"
+    L["TIME_LABEL"] = "Tiempo:"
+    L["GOLD_LABEL"] = "Oro:"
+    L["ITEMS_LABEL"] = "Objetos:"
+    L["GPH_LABEL"] = "GPH:"
+    L["PRICIEST_LABEL"] = "Más valioso:"
+    L["USAGE"] = [[====== |cFFd8de35Información de uso de ForeverLooter|r ======
+  |cFF36e8e6/flo|r: Alterna entre mostrar y ocultar
+  |cFF36e8e6/flo|r |cFFf1f488help|r: Muestra la ayuda
+  |cFF36e8e6/flo|r |cFFf1f488show|r: Muestra ForeverLooter
+  |cFF36e8e6/flo|r |cFFf1f488hide|r: Oculta ForeverLooter
+  |cFF36e8e6/flo|r |cFFf1f488info|r: Muestra información sobre el addon
+  |cFF36e8e6/flo|r |cFFf1f488custom 'custom TSM string'|r: Establece una cadena TSM custom que será usada para calcular el precio. Si está vacía, se devuelve la cadena que está siendo usada.
+    Ejemplos: /flo custom dbmarket
+              /flo custom
+  |cFF36e8e6/flo|r |cFFf1f488mprice 'value'|r: Establece el precio mínimo para una calidad.
+            mpricex: Todas las calidades.
+            mprice0: Calidad 0 - Pobre - Gris
+            mprice1: Calidad 1 - Común - Blanco
+            mprice2: Calidad 2 - Poco común - Verde
+            mprice3: Calidad 3 - Raro - Azul
+            mprice4: Calidad 4 - Épico - Morado
+    Ejemplos: /flo mprice0 50 s
+              /flo mprice1 50 s
+              /flo mprice2 5000
+              /flo mprice3 500 g
+              /flo mprice4 5 c
+      El formato de precio para mprice es un número seguido de g(old), s(ilver) o c(opper) (oro, plata y cobre respectivamente). Si solo indicas un número, se usará oro por defecto.
+      |cFF36e8e6/flo|r |cFFf1f488disenchant|r: Habilita/deshabilita usar el valor de desencatamiento (si es más alto que el valor de venta directo en subasta).
+  |cFF36e8e6Versión del addon:|r ]]
+    L["WELCOME"] =
+    "Bienvenido a |cFFd8de35ForeverLooter|r! Usa |cFF36e8e6/flo|r |cFFf1f488help|r para ver las opciones del addon."
+    L["CLOSE"] = "|cFF36e8e6/flo|r |cFFf1f488show|r: Vuelve a mostrar |cFFd8de35ForeverLooter|r"
+    L["INFO"] = "|cFFd8de35ForeverLooter|r addon ligero y rápido para rastrear el botín creado por Will0w7."
+    L["TSM_NOT_AVAILABLE"] = "|cFFd8de35ForeverLooter:|r TSM no está disponible."
+    L["TSM_CUSTOM_STRING_NOT_VALID"] =
+    "|cFFd8de35ForeverLooter:|r La siguiente cadena de TSM no es válida y no fue configurada: "
+    L["TSM_CUSTOM_STRING_VALID"] = "|cFFd8de35ForeverLooter:|r La siguiente cadena de TSM es válida y fue configurada: "
+    L["NEW_DB_VERSION"] =
+    "|cFFd8de35ForeverLooter:|r Se ha detectado una nueva versión de la base de datos, actualizando..."
+    L["DB_UPDATED"] = "|cFFd8de35ForeverLooter:|r La base de datos se ha actualizado correctamente!"
+    L["MPRICE_ERROR"] = "|cFFd8de35ForeverLooter:|r El siguiente precio mínimo es inválido: "
+    L["MPRICE_VALID"] = "|cFFd8de35ForeverLooter:|r El siguiente precio mínimo es válido y fue configurado:"
+    L["MPRICE_QUALITY_1"] = "Común"
+    L["MPRICE_QUALITY_2"] = "Poco común"
+    L["MPRICE_QUALITY_3"] = "Raro"
+    L["MPRICE_QUALITY_4"] = "Épico"
+    L["MPRICE_QUALITY_99"] = "Todas las calidades"
+    L["MPRICE_UNRECOGNIZED_COIN"] = "|cFFd8de35ForeverLooter:|r Moneda no reconocida, comprueba la entrada."
+    L["MPRICE_COIN_G"] = "Oro"
+    L["MPRICE_COIN_S"] = "Plata"
+    L["MPRICE_COIN_C"] = "Cobre"
+    L["FORCE_VENDOR_PRICE_ENABLED"] =
+    "|cFFd8de35ForeverLooter:|r Forzar precio de venta de mercader habilitado. Se usarán solo los precios de venta del mercader."
+    L["FORCE_VENDOR_PRICE_DISABLED"] = "|cFFd8de35ForeverLooter:|r Forzar precio de venta de mercader deshabilitado."
+    L["TIME_ERROR"] =
+    "|cFFd8de35ForeverLooter:|r El formato es incorrecto, debe ser: 00h00m00s o cualquier combinación de tiempo (5m30s)"
+    L["ALL"] = "TODOS"
+    L["USE_DISENCHANT_VALUE_ENABLED"] =
+    "|cFFd8de35ForeverLooter:|r Usando valor de desencantamiento cuando es más alto que el valor de venta directo en subasta."
+    L["USE_DISENCHANT_VALUE_DISABLED"] =
+    "|cFFd8de35ForeverLooter:|r Se deja de usar el valor de desencatamiento. Siempre se usará el valor de venta directo en subasta."
+    return L
+end

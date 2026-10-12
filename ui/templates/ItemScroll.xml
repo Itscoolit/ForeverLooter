@@ -1,0 +1,51 @@
+<Ui
+    xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Blizzard_SharedXML/UI.xsd"
+>
+    <Button name="FL_ItemScroll" mixin="FL_ItemScrollMixin" registerForClicks="AnyUp" virtual="true">
+        <Size y="20" />
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture parentKey="Alternate" hidden="true" alphaMode="ADD">
+                    <Color r=".04" g=".04" b=".04" a="1" />
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString parentKey="RightLabel" inherits="GameFontHighlight" justifyH="RIGHT">
+                    <Size y="20" />
+                    <Anchors>
+                        <Anchor point="RIGHT" x="-20" />
+                    </Anchors>
+                </FontString>
+                <FontString parentKey="LeftLabel" inherits="GameFontHighlight" wordwrap="false"
+                    justifyH="LEFT">
+                    <Size y="20" />
+                    <Anchors>
+                        <Anchor point="LEFT" x="5" />
+                        <Anchor point="RIGHT" relativeKey="$parent.RightLabel" relativePoint="LEFT"
+                            x="-5" />
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        <Frames>
+            <Button parentKey="RemoveButton" inherits="UIPanelCloseButton">
+                <Size x="16" y="16" />
+                <Anchors>
+                    <Anchor point="RIGHT" x="-5" />
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        self:GetParent():OnRemoveClick()
+                    </OnClick>
+                </Scripts>
+            </Button>
+        </Frames>
+        <Scripts>
+            <OnEnter method="OnEnter" />
+            <OnLeave method="OnLeave" />
+            <OnClick method="OnClick" />
+        </Scripts>
+    </Button>
+</Ui>
